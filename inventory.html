@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory | R&R Pipe and Supply</title>
+  <meta name="description" content="Browse stocked PVF and fencing inventory from the R&R Pipe and Supply demo site.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo.png" alt="R&R Pipe and Supply logo">
+        <div class="brand-copy">
+          <strong>R&amp;R Pipe and Supply</strong>
+          <span>Pipe, valves, fittings, flanges, fencing, and custom PVF services</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="inventory.html" aria-current="page">Inventory</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-pill" href="cart.html"><span data-cart-count>0</span> items</a>
+        <a class="button button-primary" href="cart.html">View Quote Basket</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section section-light">
+    <div class="container">
+      <div class="breadcrumbs">Home / Inventory</div>
+      <div class="section-kicker">Inventory</div>
+      <h1 class="section-title">Browse stocked material</h1>
+      <p class="section-intro">Search by size, item type, SKU, or category to build a faster quote request.</p>
+      <div class="filters">
+        <label><span>Search</span><input data-search type="text" placeholder="Try 2 inch pipe, flange, gasket, t-post..."></label>
+        <label><span>Category</span><select data-category><option value="all">All categories</option><option value="Pipe">Pipe</option><option value="Valves & Flanges">Valves & Flanges</option><option value="Fittings & Hardware">Fittings & Hardware</option><option value="Fencing">Fencing</option></select></label>
+        <label><span>Sort</span><select data-sort><option value="featured">Featured</option><option value="price-low">Price: Low to High</option><option value="price-high">Price: High to Low</option><option value="name">Name</option></select></label>
+      </div>
+      <p class="section-intro section-tight" data-results-count>8 products found</p>
+      <div class="product-grid" data-inventory-grid></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/images/logo.png" alt="R&R Pipe and Supply logo">
+          <div>
+            <strong>R&amp;R Pipe and Supply</strong>
+            <div class="footer-copy">PVF distribution, fencing supplies, and custom service support for Wichita Falls and surrounding areas.</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="inventory.html">Browse Inventory</a>
+        <a href="services.html">Services</a>
+        <a href="cart.html">Quote Basket</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <div class="footer-copy">940-766-5555<br>512 Indiana Ave<br>Wichita Falls, TX 76301<br>Mon–Fri 7:30AM–5:00PM</div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
