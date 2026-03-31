@@ -3,43 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quote Basket | R&R Pipe and Supply</title>
-  <meta name="description" content="Review selected inventory and prepare a quote request with R&R Pipe and Supply.">
+  <title>Material List | R&amp;R Pipe and Supply</title>
+  <meta name="description" content="Review selected items and prepare a pricing request with R&amp;R Pipe and Supply.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div class="utility-links">
+        <a href="tel:9407665555">940-766-5555</a>
+        <a href="https://maps.google.com/?q=512+Indiana+Ave+Wichita+Falls+TX+76301" target="_blank" rel="noreferrer">512 Indiana Ave, Wichita Falls, TX 76301</a>
+      </div>
+      <div class="utility-hours">Mon–Fri 7:30AM–5:00PM</div>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">
-        <img src="assets/images/logo.png" alt="R&R Pipe and Supply logo">
+        <img src="assets/images/logo.png" alt="R&amp;R Pipe and Supply logo">
         <div class="brand-copy">
           <strong>R&amp;R Pipe and Supply</strong>
-          <span>Pipe, valves, fittings, flanges, fencing, and custom PVF services</span>
+          <span>PVF, fencing, and shop services</span>
         </div>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="inventory.html" aria-current="page">Inventory</a>
+        <a href="inventory.html">Stock List</a>
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
-        <a class="cart-pill" href="cart.html"><span data-cart-count>0</span> items</a>
-        <a class="button button-primary" href="cart.html">Quote Basket</a>
+        <a class="cart-pill" href="cart.html">List <span data-cart-count>0</span></a>
+        <a class="button button-primary" href="checkout.html">Request Quote</a>
       </div>
     </div>
   </header>
 
   <main class="section section-light">
     <div class="container">
-      <div class="breadcrumbs">Inventory / Quote Basket</div>
-      <div class="section-kicker">Quote Basket</div>
-      <h1 class="section-title">Review requested items</h1>
-      <p class="section-intro">Check quantities, review estimated material totals, and move the list into a quote request.</p>
+      <div class="breadcrumbs">Stock List / Material List</div>
+      <div class="section-kicker">Material List</div>
+      <h1 class="section-title">Review quantities before requesting pricing</h1>
+      <p class="section-intro">Check the list, remove anything you do not need, and continue to pricing when the request is ready.</p>
       <div data-cart-page></div>
     </div>
   </main>
@@ -48,22 +57,22 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/images/logo.png" alt="R&R Pipe and Supply logo">
+          <img src="assets/images/logo.png" alt="R&amp;R Pipe and Supply logo">
           <div>
             <strong>R&amp;R Pipe and Supply</strong>
-            <div class="footer-copy">PVF distribution, fencing supplies, and custom service support for Wichita Falls and surrounding areas.</div>
+            <div class="footer-copy">PVF distribution, fencing stock, and shop services in Wichita Falls.</div>
           </div>
         </div>
       </div>
       <div class="footer-links">
-        <a href="inventory.html">Browse Inventory</a>
+        <a href="inventory.html">Stock List</a>
         <a href="services.html">Services</a>
-        <a href="cart.html">Quote Basket</a>
+        <a href="cart.html">Material List</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>
         <strong>Contact</strong>
-        <div class="footer-copy">940-766-5555<br>512 Indiana Ave<br>Wichita Falls, TX 76301<br>Mon–Fri 7:30AM–5:00PM</div>
+        <div class="footer-copy"><a href="tel:9407665555">940-766-5555</a><br><a href="https://maps.google.com/?q=512+Indiana+Ave+Wichita+Falls+TX+76301" target="_blank" rel="noreferrer">512 Indiana Ave<br>Wichita Falls, TX 76301</a><br>Mon–Fri 7:30AM–5:00PM</div>
       </div>
     </div>
   </footer>

@@ -46,7 +46,7 @@
       cart.push({ id: productId, quantity: Math.min(quantity, product.stock) });
     }
     saveCart(cart);
-    showToast(`${product.name} added to quote basket`);
+    showToast('Added to material list');
   }
 
   function updateQuantity(productId, quantity) {
@@ -112,11 +112,11 @@
           <p class="product-machine">${product.subtitle}</p>
           <div class="product-meta-list">
             <span>${product.condition}</span>
-            <span>${product.stock} in stock</span>
+            <span>${product.stock} on hand</span>
           </div>
           <div class="product-actions">
             <strong>${currency.format(product.price)}</strong>
-            <button class="button button-primary" data-add-to-cart="${product.id}">Add to Quote</button>
+            <button class="button button-primary" data-add-to-cart="${product.id}">Add to List</button>
           </div>
         </div>
       </article>
@@ -166,10 +166,10 @@
 
       grid.innerHTML = items.length
         ? items.map(cardMarkup).join('')
-        : '<div class="empty-state"><h3>No inventory matched that search.</h3><p>Try a different size, product type, SKU, or category.</p></div>';
+        : '<div class="empty-state"><h3>No items matched that search.</h3><p>Try a size, SKU, or product type.</p></div>';
 
       const results = document.querySelector('[data-results-count]');
-      if (results) results.textContent = `${items.length} products found`;
+      if (results) results.textContent = `${items.length} items`;
       bindAddButtons();
     };
 
@@ -202,20 +202,20 @@
             <div><span>Item Code</span><strong>${product.partNumber}</strong></div>
             <div><span>Pack Weight</span><strong>${product.weight}</strong></div>
             <div><span>Stock</span><strong>${product.stock} available</strong></div>
-            <div><span>Fulfillment</span><strong>${product.shipping}</strong></div>
+            <div><span>Delivery / Pickup</span><strong>${product.shipping}</strong></div>
             <div><span>Location</span><strong>${product.location}</strong></div>
           </div>
           <p>${product.description}</p>
           <div class="detail-actions">
-            <button class="button button-primary" data-add-to-cart="${product.id}">Add to Quote</button>
-            <a class="button button-secondary" href="contact.html">Ask About This Item</a>
+            <button class="button button-primary" data-add-to-cart="${product.id}">Add to List</button>
+            <a class="button button-secondary" href="tel:9407665555">Call Counter</a>
           </div>
           <div class="detail-block">
             <h3>Common Uses</h3>
             <ul>${product.applications.map((item) => `<li>${item}</li>`).join('')}</ul>
           </div>
           <div class="detail-block">
-            <h3>Highlights</h3>
+            <h3>Order Notes</h3>
             <ul>${product.features.map((item) => `<li>${item}</li>`).join('')}</ul>
           </div>
         </div>
@@ -234,9 +234,9 @@
     if (!items.length) {
       mount.innerHTML = `
         <div class="empty-state cart-empty">
-          <h2>Your quote basket is empty</h2>
-          <p>Add material to build a clean request before sending it to the counter.</p>
-          <a class="button button-primary" href="inventory.html">Browse Inventory</a>
+          <h2>No items on the material list yet</h2>
+          <p>Add products from the stock list, then continue here to request pricing.</p>
+          <a class="button button-primary" href="inventory.html">View Stock List</a>
         </div>
       `;
       return;
@@ -268,13 +268,13 @@
           `).join('')}
         </div>
         <aside class="summary-card">
-          <h3>Quote Summary</h3>
+          <h3>Request Summary</h3>
           <div class="summary-line"><span>Material subtotal</span><strong>${currency.format(totals.subtotal)}</strong></div>
-          <div class="summary-line"><span>Freight / delivery</span><strong>Quoted separately</strong></div>
-          <div class="summary-line"><span>Sales tax</span><strong>Calculated if applicable</strong></div>
+          <div class="summary-line"><span>Route delivery / freight</span><strong>Quoted as needed</strong></div>
+          <div class="summary-line"><span>Sales tax</span><strong>Added if applicable</strong></div>
           <div class="summary-line total"><span>Estimated material total</span><strong>${currency.format(totals.subtotal)}</strong></div>
-          <p class="summary-note">Final pricing is confirmed after stock, delivery method, and any cut, thread, or groove work is reviewed.</p>
-          <a class="button button-primary full-width" href="checkout.html">Request a Quote</a>
+          <p class="summary-note">Final pricing depends on stock check, delivery method, and any cut, thread, or groove work.</p>
+          <a class="button button-primary full-width" href="checkout.html">Continue to Request</a>
         </aside>
       </div>
     `;
@@ -298,7 +298,7 @@
     mount.innerHTML = `
       <div class="checkout-layout">
         <form class="checkout-form" data-order-request>
-          <div class="section-heading"><h2>Quote Request Details</h2><p>Provide the contact information and job notes needed to review the request cleanly.</p></div>
+          <div class="section-heading"><h2>Request Details</h2><p>Provide the contact and job details needed to work the request cleanly.</p></div>
           <div class="form-grid">
             <label><span>Company Name</span><input required placeholder="Your company"></label>
             <label><span>Contact Name</span><input required placeholder="Your name"></label>
@@ -306,18 +306,18 @@
             <label><span>Phone</span><input required placeholder="(940) 555-5555"></label>
             <label><span>City</span><input required placeholder="Wichita Falls"></label>
             <label><span>State</span><input required placeholder="TX"></label>
-            <label><span>Delivery Method</span><select><option>Local delivery</option><option>Will-call pickup</option><option>Parcel / freight quote</option></select></label>
+            <label><span>Delivery Method</span><select><option>Local delivery</option><option>Will-call pickup</option><option>Freight quote</option></select></label>
             <label><span>Needed By</span><input placeholder="ASAP / next week / project date"></label>
-            <label class="full"><span>Notes</span><textarea placeholder="Add size confirmations, project details, cutting or threading requests, or delivery instructions."></textarea></label>
+            <label class="full"><span>Job Notes</span><textarea placeholder="Add size confirmations, quantities, cut or thread requests, groove details, or jobsite delivery notes."></textarea></label>
           </div>
-          <button class="button button-primary full-width" type="submit">Submit Quote Request</button>
-          <p class="summary-note">Include any delivery notes, jobsite details, or custom prep instructions that affect the order.</p>
+          <button class="button button-primary full-width" type="submit">Send Request</button>
+          <p class="summary-note">For same-day needs, call the counter after sending the request.</p>
         </form>
         <aside class="summary-card">
-          <h3>Quote Basket</h3>
-          ${items.length ? items.map((item) => `<div class="summary-line"><span>${item.name} × ${item.quantity}</span><strong>${currency.format(item.lineTotal)}</strong></div>`).join('') : '<p>No items in quote basket yet.</p>'}
+          <h3>Material List</h3>
+          ${items.length ? items.map((item) => `<div class="summary-line"><span>${item.name} × ${item.quantity}</span><strong>${currency.format(item.lineTotal)}</strong></div>`).join('') : '<p>No items on the list yet.</p>'}
           <div class="summary-line"><span>Material subtotal</span><strong>${currency.format(totals.subtotal)}</strong></div>
-          <div class="summary-line"><span>Freight / delivery</span><strong>Quoted separately</strong></div>
+          <div class="summary-line"><span>Route delivery / freight</span><strong>Quoted as needed</strong></div>
         </aside>
       </div>
     `;
@@ -326,8 +326,9 @@
     form?.addEventListener('submit', (event) => {
       event.preventDefault();
       localStorage.removeItem(CART_KEY);
+      localStorage.setItem('rrp-request-sent', '1');
       updateCartCount();
-      showToast('Quote request submitted');
+      showToast('Request logged');
       window.location.href = 'index.html?quoteRequest=1';
     });
   }
@@ -338,15 +339,16 @@
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       form.reset();
-      showToast('Request received');
+      showToast('Request noted');
     });
   }
 
   function showSuccessBanner() {
     const params = new URLSearchParams(window.location.search);
     const mount = document.querySelector('[data-home-banner]');
-    if (mount && params.get('quoteRequest') === '1') {
-      mount.innerHTML = '<div class="success-banner">Quote request received. The request includes quantities, delivery method, and job notes for follow-up.</div>';
+    if (mount && (params.get('quoteRequest') === '1' || localStorage.getItem('rrp-request-sent') === '1')) {
+      mount.innerHTML = '<div class="success-banner">Request logged. Call the counter for same-day stock checks or delivery timing.</div>';
+      localStorage.removeItem('rrp-request-sent');
       history.replaceState({}, '', 'index.html');
     }
   }

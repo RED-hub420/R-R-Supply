@@ -5,7 +5,7 @@ window.RRP_PRODUCTS = [
     name: '2" Schedule 40 Carbon Steel Pipe',
     subtitle: '21 ft random length • plain end • A53 carbon steel',
     category: 'Pipe',
-    condition: 'Stocked Material',
+    condition: 'Stock Item',
     price: 182,
     stock: 24,
     location: 'Pipe Yard',
@@ -13,17 +13,17 @@ window.RRP_PRODUCTS = [
     partNumber: 'PIPE-2-S40-CS',
     weight: '96 lb',
     image: 'assets/images/carbon-pipe.svg',
-    description: 'Standard schedule 40 carbon steel pipe staged for contractor, industrial, and maintenance orders. Good fit for general service lines, fabrication work, and shop stock.',
+    description: 'Standard schedule 40 carbon steel pipe for general service, fabrication, and maintenance orders.',
     applications: ['General service piping', 'Shop fabrication', 'Maintenance replacement stock'],
-    features: ['21 ft random length', 'Carbon steel stocked locally', 'Good for pickup or delivery routes', 'Quote-friendly bulk ordering']
+    features: ['21 ft random length', 'Carbon steel stock item', 'Good fit for yard pickup or local delivery', 'Common starting point for larger pipe requests']
   },
   {
     id: 'rrp-ss-ball-valve-2in',
     sku: 'RRP-2002',
     name: '2" 316 Stainless Ball Valve',
     subtitle: 'Threaded ends • locking handle • 1000 WOG',
-    category: 'Valves & Flanges',
-    condition: 'New Stock',
+    category: 'Valves',
+    condition: 'Stock Item',
     price: 248,
     stock: 9,
     location: 'Warehouse A',
@@ -31,17 +31,17 @@ window.RRP_PRODUCTS = [
     partNumber: 'BV-2-316-1000',
     weight: '12 lb',
     image: 'assets/images/stainless-valve.svg',
-    description: 'Stainless valve option built for corrosion resistance and clean shutoff performance in plant, shop, and commercial applications.',
+    description: '316 stainless threaded ball valve for shutoff service where corrosion resistance matters.',
     applications: ['Process line shutoff', 'Corrosion-sensitive installs', 'Service truck replenishment'],
-    features: ['316 stainless body', 'Quarter-turn handle', 'Pressure-rated stock item', 'Ready for fast local fulfillment']
+    features: ['316 stainless body', 'Quarter-turn handle', 'Pressure-rated stock valve', 'Can be added to mixed PVF requests']
   },
   {
     id: 'rrp-weld-neck-flange-4in',
     sku: 'RRP-2003',
     name: '4" 150# Weld Neck Flange',
-    subtitle: 'Carbon steel • beveled neck • pressure class 150',
-    category: 'Valves & Flanges',
-    condition: 'New Stock',
+    subtitle: 'Carbon steel • beveled neck • class 150',
+    category: 'Flanges',
+    condition: 'Stock Item',
     price: 86,
     stock: 31,
     location: 'Flange Rack',
@@ -49,17 +49,17 @@ window.RRP_PRODUCTS = [
     partNumber: 'WNF-4-150-CS',
     weight: '18 lb',
     image: 'assets/images/flange.svg',
-    description: 'Reliable flange stock for fabrication shops, plant maintenance, and field replacement work. Keeps common pressure-class flange sizes close at hand.',
+    description: 'Common class 150 weld neck flange for fabrication, replacement work, and plant maintenance.',
     applications: ['Pipe fabrication', 'Plant maintenance', 'Pressure piping connections'],
-    features: ['Class 150 stock size', 'Carbon steel construction', 'Common fab-shop item', 'Works well in mixed-order quotes']
+    features: ['Class 150 stock size', 'Carbon steel construction', 'Common fab-shop line item', 'Easy to bundle with gaskets and studs']
   },
   {
     id: 'rrp-galv-coupling-1-5',
     sku: 'RRP-2004',
     name: '1-1/2" Galvanized Coupling',
     subtitle: 'Threaded fitting • malleable iron • galvanized finish',
-    category: 'Fittings & Hardware',
-    condition: 'New Stock',
+    category: 'Fittings',
+    condition: 'Stock Item',
     price: 14,
     stock: 120,
     location: 'Counter Bin 4',
@@ -67,17 +67,17 @@ window.RRP_PRODUCTS = [
     partNumber: 'GC-1.5-MI',
     weight: '2 lb',
     image: 'assets/images/coupling.svg',
-    description: 'Core threaded fitting for repairs, line extensions, and everyday contractor jobs. High-turn inventory item customers expect to have on hand.',
+    description: 'Everyday threaded fitting for repairs, small jobs, and regular counter traffic.',
     applications: ['Threaded pipe repair', 'Small project material lists', 'Counter sales'],
-    features: ['Galvanized finish', 'Malleable iron fitting', 'High-volume stock item', 'Easy parcel shipping']
+    features: ['Galvanized finish', 'Malleable iron fitting', 'High-turn stock item', 'Easy parcel or counter pickup item']
   },
   {
     id: 'rrp-gasket-6in-150',
     sku: 'RRP-2005',
     name: '6" Spiral Wound Gasket, Class 150',
-    subtitle: '316/graphite style • industrial sealing application',
-    category: 'Fittings & Hardware',
-    condition: 'New Stock',
+    subtitle: '316 / graphite style • flange service',
+    category: 'Gaskets & Studs',
+    condition: 'Stock Item',
     price: 28,
     stock: 44,
     location: 'Gasket Cabinet',
@@ -85,17 +85,17 @@ window.RRP_PRODUCTS = [
     partNumber: 'SWG-6-150',
     weight: '1 lb',
     image: 'assets/images/gasket.svg',
-    description: 'Practical gasket stock for flange service, turnaround work, and daily maintenance jobs where the right sealing material needs to be ready now.',
+    description: 'Spiral wound gasket for class 150 flange work and daily maintenance use.',
     applications: ['Flange assembly service', 'Maintenance shutdown work', 'Industrial sealing stock'],
-    features: ['Class 150 size', 'Easy to stage with flange orders', 'Compact shelf inventory', 'Fast counter pickup item']
+    features: ['Class 150 size', 'Good companion item for flange orders', 'Compact shelf stock', 'Easy will-call or parcel pickup']
   },
   {
     id: 'rrp-studs-kit-3-4',
     sku: 'RRP-2006',
     name: '3/4" Studs with Heavy Hex Nuts Kit',
     subtitle: 'B7 studs + 2H nuts • boxed set for flange work',
-    category: 'Fittings & Hardware',
-    condition: 'New Stock',
+    category: 'Gaskets & Studs',
+    condition: 'Stock Item',
     price: 74,
     stock: 18,
     location: 'Hardware Shelf',
@@ -103,9 +103,9 @@ window.RRP_PRODUCTS = [
     partNumber: 'STUD-34-B7-2H',
     weight: '9 lb',
     image: 'assets/images/studs.svg',
-    description: 'Ready-to-go bolting kit for flange packages and repair calls. Keeps crews from piecing together hardware one piece at a time.',
+    description: 'Boxed stud and nut set for flange packages, repair calls, and maintenance orders.',
     applications: ['Flange assembly', 'Maintenance callouts', 'Package material orders'],
-    features: ['Matched stud and nut kit', 'Built for common flange jobs', 'Good add-on line item', 'Warehouse-stocked hardware']
+    features: ['Matched stud and nut kit', 'Built for common flange work', 'Useful add-on line item', 'Warehouse stock hardware']
   },
   {
     id: 'rrp-tpost-6-5',
@@ -113,7 +113,7 @@ window.RRP_PRODUCTS = [
     name: '6.5 ft T-Post Bundle',
     subtitle: 'Painted steel posts • fencing and ranch supply',
     category: 'Fencing',
-    condition: 'Stocked Material',
+    condition: 'Stock Item',
     price: 119,
     stock: 15,
     location: 'Fencing Yard',
@@ -121,9 +121,9 @@ window.RRP_PRODUCTS = [
     partNumber: 'TP-65-BDL',
     weight: '118 lb',
     image: 'assets/images/t-post.svg',
-    description: 'Bundled t-post stock for ranch, perimeter, and temporary fence jobs. Simple product, strong turnover, and easy to build into bulk material quotes.',
+    description: 'Bundled t-post stock for fence repairs, new runs, and ranch or acreage work.',
     applications: ['Fence repair', 'New fence runs', 'Ranch and property maintenance'],
-    features: ['Bundle quantity format', 'Outdoor yard stock', 'Works with gates and wire orders', 'Built for delivery routes']
+    features: ['Bundle quantity format', 'Outdoor yard stock', 'Can be paired with gates and wire', 'Set up for delivery routes or pickup']
   },
   {
     id: 'rrp-barbed-wire-roll',
@@ -131,7 +131,7 @@ window.RRP_PRODUCTS = [
     name: '12.5 Gauge Barbed Wire Roll',
     subtitle: '1320 ft roll • class 3 coating • ranch fencing',
     category: 'Fencing',
-    condition: 'Stocked Material',
+    condition: 'Stock Item',
     price: 96,
     stock: 22,
     location: 'Fencing Yard',
@@ -139,8 +139,8 @@ window.RRP_PRODUCTS = [
     partNumber: 'BW-125-1320',
     weight: '74 lb',
     image: 'assets/images/barbed-wire.svg',
-    description: 'Full-roll barbed wire inventory for ranch, acreage, and general perimeter work. Common fencing material that belongs in the same clean quote workflow as gates and posts.',
+    description: 'Full-roll barbed wire stock for perimeter work, ranch repairs, and bulk fence orders.',
     applications: ['Perimeter fencing', 'Ranch maintenance', 'Bulk fencing orders'],
-    features: ['1320 ft roll', 'Class 3 coating', 'Pairs with t-post bundles', 'Popular yard inventory item']
+    features: ['1320 ft roll', 'Class 3 coating', 'Often paired with posts and gates', 'Yard stock item']
   }
 ];
