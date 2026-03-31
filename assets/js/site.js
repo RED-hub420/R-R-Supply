@@ -235,7 +235,7 @@
       mount.innerHTML = `
         <div class="empty-state cart-empty">
           <h2>Your quote basket is empty</h2>
-          <p>Add materials to build a clean inquiry before submitting your quote request.</p>
+          <p>Add material to build a clean request before sending it to the counter.</p>
           <a class="button button-primary" href="inventory.html">Browse Inventory</a>
         </div>
       `;
@@ -273,7 +273,7 @@
           <div class="summary-line"><span>Freight / delivery</span><strong>Quoted separately</strong></div>
           <div class="summary-line"><span>Sales tax</span><strong>Calculated if applicable</strong></div>
           <div class="summary-line total"><span>Estimated material total</span><strong>${currency.format(totals.subtotal)}</strong></div>
-          <p class="summary-note">Final pricing can be confirmed after stock, delivery method, and any custom cutting or threading needs are reviewed.</p>
+          <p class="summary-note">Final pricing is confirmed after stock, delivery method, and any cut, thread, or groove work is reviewed.</p>
           <a class="button button-primary full-width" href="checkout.html">Request a Quote</a>
         </aside>
       </div>
@@ -298,7 +298,7 @@
     mount.innerHTML = `
       <div class="checkout-layout">
         <form class="checkout-form" data-order-request>
-          <div class="section-heading"><h2>Quote Request Details</h2><p>Provide the basics and this demo flow will behave like a submitted inquiry.</p></div>
+          <div class="section-heading"><h2>Quote Request Details</h2><p>Provide the contact information and job notes needed to review the request cleanly.</p></div>
           <div class="form-grid">
             <label><span>Company Name</span><input required placeholder="Your company"></label>
             <label><span>Contact Name</span><input required placeholder="Your name"></label>
@@ -311,7 +311,7 @@
             <label class="full"><span>Notes</span><textarea placeholder="Add size confirmations, project details, cutting or threading requests, or delivery instructions."></textarea></label>
           </div>
           <button class="button button-primary full-width" type="submit">Submit Quote Request</button>
-          <p class="summary-note">This is a static demo. Submitting clears the basket locally and shows the confirmation state on the homepage.</p>
+          <p class="summary-note">Include any delivery notes, jobsite details, or custom prep instructions that affect the order.</p>
         </form>
         <aside class="summary-card">
           <h3>Quote Basket</h3>
@@ -332,11 +332,21 @@
     });
   }
 
+  function bindContactForm() {
+    const form = document.querySelector('[data-contact-form]');
+    if (!form) return;
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.reset();
+      showToast('Request received');
+    });
+  }
+
   function showSuccessBanner() {
     const params = new URLSearchParams(window.location.search);
     const mount = document.querySelector('[data-home-banner]');
     if (mount && params.get('quoteRequest') === '1') {
-      mount.innerHTML = '<div class="success-banner">Quote request received. A team member can follow up on availability, delivery, and custom service needs.</div>';
+      mount.innerHTML = '<div class="success-banner">Quote request received. The request includes quantities, delivery method, and job notes for follow-up.</div>';
       history.replaceState({}, '', 'index.html');
     }
   }
@@ -348,6 +358,7 @@
     renderProductPage();
     renderCartPage();
     renderCheckoutPage();
+    bindContactForm();
     showSuccessBanner();
     bindAddButtons();
   });
